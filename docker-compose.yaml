@@ -5,4 +5,4 @@ services:
     build: .
     # image: "trainwithshubham/node-app-batch-6:latest"
     ports:
-      - "8001:8001"
+      - "8001:8000"
