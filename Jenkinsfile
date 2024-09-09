@@ -32,7 +32,7 @@ pipeline {
         }
         stage("deploy"){
             steps{
-                sh "docker-compose down && docker-compose up -d"
+                sh "docker-compose down && docker-compose up -d --no-deps --build --no-cache"
                 echo 'deployment ho gayi'
             }
         }
