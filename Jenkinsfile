@@ -1,6 +1,8 @@
 pipeline {
     agent any // { label "dev-server"}
-    
+ environment {
+        SONARQUBE_URL = 'http://your-sonarqube-server-url'
+        SONARQUBE_TOKEN = credentials('your-sonar-token-id')
     stages {
         
         stage("code"){
@@ -22,7 +24,17 @@ pipeline {
            }
         }
    }
-
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    // This will execute the SonarQube scanner
+                    withSonarQubeEnv('SonarQube') { // 'SonarQube' is the name of your SonarQube server in Jenkins
+                        sh 'sonar-scanner'
+                    }
+                }
+            }
+        }
+      
                 
         
         stage("scan image"){
