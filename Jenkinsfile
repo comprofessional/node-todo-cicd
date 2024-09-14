@@ -1,17 +1,17 @@
 pipeline {
     agent any // { label "dev-server"}
-// environment {
-    //    SONARQUBE_URL = 'http://localhost:9000'
-     //   SONARQUBE_TOKEN = credentials('SonarQube-Token')
-// }
+ environment {
+        SONARQUBE_URL = 'http://localhost:9000'
+        SONARQUBE_TOKEN = credentials('SonarQube-Token')
+ }
    stages {
         
-       // stage("code"){
-        //    steps{
-        //        git url: "https://github.com/comprofessional/node-todo-cicd.git", branch: "master"
-         //       echo 'bhaiyya code clone ho gaya'
-         //   }
-     //   }
+        stage("code"){
+            steps{
+                git url: "https://github.com/comprofessional/node-todo-cicd.git", branch: "master"
+                echo 'bhaiyya code clone ho gaya'
+            }
+        }
         // stage("build and test"){
            // steps{
              //   sh "docker build -t node-app-test-new ."
