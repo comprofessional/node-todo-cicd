@@ -1,8 +1,8 @@
 pipeline {
     agent any // { label "dev-server"}
  environment {
-        SONARQUBE_URL = 'http://your-sonarqube-server-url'
-        SONARQUBE_TOKEN = credentials('your-sonar-token-id')
+        SONARQUBE_URL = 'http://localhost:9000/'
+        SONARQUBE_TOKEN = credentials('SonarQube-Token')
  }
     stages {
         
