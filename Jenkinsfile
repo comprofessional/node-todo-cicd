@@ -58,5 +58,6 @@ pipeline {
                 echo 'deployment ho gayi'
             }
         }
-    
+    }
+}
 }
