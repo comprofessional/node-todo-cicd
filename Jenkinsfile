@@ -3,6 +3,7 @@ pipeline {
  environment {
         SONARQUBE_URL = 'http://your-sonarqube-server-url'
         SONARQUBE_TOKEN = credentials('your-sonar-token-id')
+ }
     stages {
         
         stage("code"){
