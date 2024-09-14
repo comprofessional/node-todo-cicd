@@ -4,7 +4,7 @@ pipeline {
     //    SONARQUBE_URL = 'http://localhost:9000'
      //   SONARQUBE_TOKEN = credentials('SonarQube-Token')
 // }
-  //  stages {
+   stages {
         
        // stage("code"){
         //    steps{
