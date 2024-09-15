@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         SONARQUBE_URL = 'http://localhost:9000'
-        SONARQUBE_TOKEN = credentials('SonarQube-Token')
+        SONARQUBE_TOKEN = credentials('SonarQube-Token1')
     }
     stages {
         stage('Clone Code') {
