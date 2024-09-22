@@ -21,7 +21,8 @@ Test_job:
 Push_job:
   stage: push_to_dockerhub
   script:
-    - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
+    # - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASS
+    - echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
     - docker image tag node-app:latest $DOCKERHUB_USER/node-app:latest
     - docker push $DOCKERHUB_USER/node-app:latest
   tags:
