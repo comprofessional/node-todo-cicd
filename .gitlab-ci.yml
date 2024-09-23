@@ -31,7 +31,8 @@ Push_job:
 Deploy_job:
   stage: deploy
   script:
-    - docker-compose up -d --no-deps --build --no-cache web
+    - docker-compose build --no-cache web
+    - docker-compose up -d --no-deps web
 
   tags:
     - dev
